@@ -79,8 +79,7 @@ void fn_SubscribeData ( PROTOCOL_STAT *s, PARAMSTAT *param, uint8_t fn_type, uns
 
     switch (fn_type) {
 
-        case FN_TYPE_POST_WRITE:
-        case FN_TYPE_POST_READRESPONSE:
+        case FN_TYPE_PRE_WRITE:
 
             // Check if length of received data is plausible.
             if(len != sizeof(PROTOCOL_SUBSCRIBEDATA)) {
